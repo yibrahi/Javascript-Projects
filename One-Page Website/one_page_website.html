@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobiles</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#video">Video</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Auto World</h1>
+        <h2>About</h2>
+        <p>
+            Auto World is a one-page website about automobiles, including classic cars,
+            sports cars, and modern vehicles.
+        </p>
+        <p>
+            This site shares car photos, information, and videos for people who enjoy
+            learning about automobiles.
+        </p>
+    </section>
+
+    
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Click on any image to view a larger version.</p>
+
+        <div class="gallery-row">
+
+            <div class="gallery-column">
+                <img 
+                    src="images/car1-small.jpg" 
+                    data-full="images/car1-large.jpg"
+                    alt="Classic automobile"
+                    class="gallery-img">
+            </div>
+
+            <div class="gallery-column">
+                <img 
+                    src="images/car2-small.jpg" 
+                    data-full="images/car2-large.jpg"
+                    alt="Modern sports car"
+                    class="gallery-img">
+            </div>
+
+            <div class="gallery-column">
+                <img 
+                    src="images/car3-small.jpg" 
+                    data-full="images/car3-large.jpg"
+                    alt="Luxury automobile"
+                    class="gallery-img">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="close">&times;</span>
+
+        <span class="prev">&#10094;</span>
+        <img class="lightbox-content" id="lightboxImage">
+        <span class="next">&#10095;</span>
+
+        <div id="caption"></div>
+    </div>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Featured Video</h2>
+        <p>Watch a short video about Classic cars.</p>
+
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/aCLcVRFIfGk" 
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Contact us to share your favorite automobile or ask a question.</p>
+
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="favorite-car">Favorite Car:</label><br>
+            <input type="text" id="favorite-car" name="favorite-car"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Auto World. All rights reserved.</p>
+    </footer>
+    <script src="JS/one_page_website.js"></script>
+
+</body>
+</html>

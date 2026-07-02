@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="Home" class="home-section">
+        <video autoplay muted loop class="background-video">
+            <source src="videos/coding.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <div class="home-content">
+            <h1>My Portfolio</h1>
+
+            <p class="quote">
+                "The computer programmer is a creator of universes for which he alone is the lawgiver."
+                <br>
+                - Joseph Weizenbaum
+            </p>
+
+            <p>
+                My name is Yahya. Welcome to my portfolio website.
+                Here, I will tell you about my background, skills, and projects.
+            </p>
+
+            <p>Thank you for visiting!</p>
+        </div>
+    </section>
+
+    <!-- SLIDESHOW SECTION -->
+    <section id="Slideshow" class="section dark-section">
+        <h2>My Skills & Goals</h2>
+
+        <div id="Slideshow_Container">
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/laptop.jpg" alt="Laptop and web development">
+                <div class="text">Welcome to my technology portfolio.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/githublogo.jpeg" alt="GitHub logo">
+                <div class="text">I use GitHub to organize and share my coding projects.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/html_pic.jpg" alt="Contact image">
+                <div class="text">I am learning HTML, CSS, JavaScript, Bootstrap, Git, and GitHub.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/technology.jpg" alt="Technology learning">
+                <div class="text">I am working toward a career in IT, networking, cloud, and cybersecurity.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/githublogo.jpeg" alt="GitHub projects">
+                <div class="text">You can view my projects on GitHub</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/contact.jpg" alt="Contact me">
+                <div class="text">
+                    <a onclick="openForm()" class="white-text contact">Contact me now!</a>
+                </div>
+            </div>
+
+            <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <br>
+
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="About" class="section">
+        <div class="row">
+            <div class="column">
+                <img src="images/laptop.jpg" alt="Laptop" class="section-img">
+            </div>
+
+            <div class="column">
+                <h2>About</h2>
+                <p>
+                    I am learning web development and building my skills in HTML, CSS,
+                    Bootstrap, JavaScript, and other technologies.
+                </p>
+
+                <p>
+                    I enjoy creating clean, responsive websites and improving my coding
+                    skills through hands-on projects.
+                </p>
+
+                <p>
+                    I am currently working toward a career in technology and continuing
+                    to build projects for my portfolio.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GITHUB SECTION -->
+    <section id="Github" class="section dark-section">
+        <div class="row">
+            <div class="column">
+                <h2>GitHub</h2>
+                <p>
+                    You can view my coding projects on my GitHub profile.
+                </p>
+
+                <a href="https://github.com/yibrahi/HTML-and-CSS-Projects" target="_blank" class="button">
+                    Visit My GitHub
+                </a>
+            </div>
+
+            <div class="column">
+                <img src="images/githublogo.jpeg" alt="GitHub logo" class="section-img">
+            </div>
+        </div>
+    </section>
+
+   <!-- POPUP CONTACT FORM -->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/mrgolqyv" method="POST" class="form-container">
+                <h1>Contact</h1>
+
+                <label for="name"><b>Name</b></label>
+                <input type="text" id="name" placeholder="Type your name here" name="name" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="email" id="email" placeholder="Type your email address here" name="email" required>
+
+                <label for="message"><b>Message</b></label>
+                <input type="text" id="message" placeholder="Type your message here" name="message" required>
+
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            &copy; 2026 Yahya's Portfolio |
+            <a href="https://github.com/yibrahi" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+    <script src="JS/portfolio.js"></script>
+
+</body>
+</html>
